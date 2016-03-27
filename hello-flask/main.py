@@ -11,10 +11,6 @@ def mainpage():
 def about():
   return render_template("about.html")
   
-@app.route("/hello/")
-def main():
-  return render_template("hello.html")
-  
   
 if __name__ == "__main__":
     app.run(debug = True, port = 80, host = '0.0.0.0')
