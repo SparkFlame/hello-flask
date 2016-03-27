@@ -5,19 +5,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def mainpage():
-    return render_template("hello.html")
+    return render_template("main.html")
     
 @app.route("/about/")
 def about():
   return render_template("about.html")
   
-@app.route("/main/")
+@app.route("/hello/")
 def main():
-  return ("main.html")
+  return render_template("hello.html")
   
-"""@app.route("/main/welcome/<name>")
-def welcome(name=None):
-    return render_template('welcome.html', name=name)"""
   
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True, port = 80, host = '0.0.0.0')
